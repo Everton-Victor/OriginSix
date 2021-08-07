@@ -45,7 +45,7 @@ h1 {
 
 /*======== LAYOUT ========*/
 #header-menu {
-     
+     border-bottom: 1px solid #E4E4E4;
 }
 
 #header-menu nav.container {
@@ -57,13 +57,22 @@ h1 {
 }
 
 .logo {
+    font: 700 1.31rem 'Poppins', sans-serif;
+    color: var(--title-color);
+}
 
+.logo span {
+    color: var(--base-color);
 }
 
 .container {
     width: 100%;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+}
+
+.section {
+    padding: 5rem 0;
 }
 
 .button {
