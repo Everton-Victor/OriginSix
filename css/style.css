@@ -44,16 +44,25 @@ h1 {
 }
 
 /*======== LAYOUT ========*/
+.section {
+    padding: 5rem 0;
+}
+
 #header-menu {
      border-bottom: 1px solid #E4E4E4;
 }
 
-#header-menu nav.container {
+#header-menu nav {
     display: flex;
     height: 4.5rem;
     align-items: center; /* Vertical */
     justify-content: space-between; /* Horizontal */
+}
 
+.container {
+    width: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .logo {
@@ -65,16 +74,15 @@ h1 {
     color: var(--base-color);
 }
 
-.container {
-    width: 100%;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+.grid {
+    display: grid;
+    gap: 2rem;
 }
 
-.section {
-    padding: 5rem 0;
+/*======== HOME ========*/
+#home .container {
+    margin: 0;
 }
 
-.button {
 
-}
+
