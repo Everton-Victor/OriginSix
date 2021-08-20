@@ -1,5 +1,5 @@
 # OriginSix
-### HTML, CSS, JS
+### HTML, CSS e JS
 
 #### Link da Prototipação (Figma)
 - https://www.figma.com/file/aItOzJVuNVbgCQadbwbSty/Origin-Six-Copy?node-id=0%3A1
