@@ -72,7 +72,8 @@ h1 {
 }
 
 main {
-    margin-top: var(--header-hight);
+    /*It's function to do math operation in css*/
+    margin-top: calc(var(--header-hight) + 2rem);
 }
 
 /*======== LAYOUT ========*/
@@ -80,15 +81,6 @@ main {
     width: 100%;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-}
-
-.logo {
-    font: 700 1.31rem 'Poppins', sans-serif;
-    color: var(--title-color);
-}
-
-.logo span {
-    color: var(--base-color);
 }
 
 .grid {
@@ -112,6 +104,17 @@ main {
      background: var(--body-color);
 }
 
+/*======== LOGO ========*/
+.logo {
+    font: 700 1.31rem 'Poppins', sans-serif;
+    color: var(--title-color);
+}
+
+.logo span {
+    color: var(--base-color);
+}
+
+/*======== NAVIGATION ========*/
 #header-menu nav {
     display: flex;
     width: 100%;
