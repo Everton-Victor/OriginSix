@@ -1,4 +1,10 @@
 /*======== RESET ========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -8,11 +14,11 @@ a {
     text-decoration: none;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ul {
+    list-style: none;
 }
+
+
 
 /*======== VARIABLES CSS========*/
 :root {
@@ -40,7 +46,7 @@ body {
     -webkit-font-smoothing: antialiased; /*Desabilita uma prop. do Chrome*/
 }
 
-h1 {
+.title {
     font: 700 1.875rem "Poppins", sans-serif;
     color: var(--title-color);
     -webkit-font-smoothing: auto;
@@ -123,11 +129,66 @@ main {
     justify-content: space-between; /* Horizontal */
 }
 
+nav .menu {
+    opacity: 0;
+    visibility: hidden; /*hidden menu*/
+}
+
+nav ul li a {
+    transition: color 0.2s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--base-color)
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--base-color);
+
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+nav.show .menu {
+    opacity: 1;
+    visibility: visible;
+
+    background-color: var(--body-color);
+    height: 100vh; /*100% Height of viwport, height of screen device*/
+    width: 100vw; /*100% Width of viwport, width of screen device*/
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    place-content: center; /*center screen itens*/
+}
+
+nav.show ul.grid {
+    gap: 4rem;
+}
+
+nav ul li {
+    text-align: center;
+}
 
 /*======== HOME ========*/
 #home {
     /*
-        Corta as pastes que transbordam 
+        Corta as partes que transbordam 
         nos dois eixos
     */
     overflow-x: hidden;
