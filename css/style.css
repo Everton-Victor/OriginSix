@@ -72,8 +72,17 @@ body {
     height: 1px;
     background: linear-gradient(
         270deg, 
-        hsla(var(--hue), 36%, 57%, 1) 0%,
-        hsla(var(--hue), 65%, 88%, 0.34) 100%
+        hsla(var(--hue), 36%, 57%, 1),
+        hsla(var(--hue), 65%, 88%, 0.34) 
+    );
+}
+
+.divider-2 {
+    height: 1px;
+    background: linear-gradient(
+        270deg, 
+        hsla(var(--hue), 65%, 88%, 0.34),
+        hsla(var(--hue), 36%, 57%, 1)
     );
 }
 
@@ -95,6 +104,10 @@ main {
 
 .section {
     padding: 5rem 0;
+}
+
+.section .title {
+    margin-bottom: 1rem;
 }
 
 #header-menu {
@@ -261,4 +274,46 @@ nav.show div.icon-close {
 
 #home .text p {
     margin-bottom: 2rem;
+}
+
+/*======== ABOUT ========*/
+#about {
+    background-color: #FFF;
+}
+
+#about .container {
+    margin: 0;
+}
+
+#about .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+#about .image {
+    position: relative;
+}
+
+/*
+    Cria um elemento imaginário 
+    antes do conteúdo da .image
+*/
+#about .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -8.3%;
+    left: -33%;
+    z-index: 0;
+}
+
+#about .image img {
+    position: relative;
+}
+
+#about .image img,
+#about .image::before {
+    border-radius: 0.25rem;
 }
