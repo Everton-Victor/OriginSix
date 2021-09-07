@@ -20,6 +20,8 @@ ul {
 
 
 
+
+
 /*======== VARIABLES CSS========*/
 :root {
     --hue: 159;
@@ -39,6 +41,10 @@ ul {
 
 
 /*======== BASE ========*/
+html {
+    scroll-behavior: smooth; /*Transição da rolagem da barra*/
+}
+
 body {
     font: 400 1rem "DM Sans", sans-serif;
     background-color: var(--body-color);
@@ -106,6 +112,14 @@ main {
     padding: 5rem 0;
 }
 
+.section header {
+    margin-bottom: 4rem;
+}
+
+.section header strong {
+    color: var(--base-color);
+}
+
 .section .title {
     margin-bottom: 1rem;
 }
@@ -120,6 +134,10 @@ main {
      left: 0;
      z-index: 2;
      background: var(--body-color);
+}
+
+#header-menu.scroll {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);
 }
 
 /*======== LOGO ========*/
@@ -144,6 +162,12 @@ main {
 nav .menu {
     opacity: 0;
     visibility: hidden; /*hidden menu*/
+    top: -20rem;
+    transition: 0.2s;
+}
+
+nav .menu ul {
+    display: none; 
 }
 
 nav ul li a {
@@ -189,6 +213,10 @@ nav.show .menu {
     place-content: center; /*center screen itens*/
 }
 
+nav.show .menu ul {
+    display: grid;
+}
+
 nav.show ul.grid {
     gap: 4rem;
 }
@@ -210,14 +238,14 @@ nav .icon-close {
 
     position: absolute;
     right: 1.5rem;
-
-
-
+    top: -1.5rem;
+    transition: all 0.2s;
 }
 
 nav.show div.icon-close {
     visibility: visible;
     opacity: 1;
+    top: 1.5rem;
 }
 
 /*======== HOME ========*/
@@ -316,4 +344,30 @@ nav.show div.icon-close {
 #about .image img,
 #about .image::before {
     border-radius: 0.25rem;
+}
+
+/*======== SERVICES ========*/
+.cards.grid {
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 3.625rem 2rem;
+    background: #F9F9F9;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: 0.25rem solid var(--base-color);
+    border-radius: 0.25rem 0.25rem 0 0;
+    text-align: center;
+}
+
+.card i {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    color: var(--base-color);
+}
+
+.card .title {
+    font: 1.5rem;
+    margin-bottom: 0.75rem;
 }
